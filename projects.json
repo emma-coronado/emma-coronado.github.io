@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {"name": "Minesweeper", 
+        "tools":"C++ with SFML library", 
+        "description":"Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing."},
+        
+        {"name": "Personal Website", "tools":"HTML, JS, and CSS with Bootstrap framework", 
+        "description":"Online portfolio", 
+        "link":{"url":"https://github.com/emma-coronado/emma-coronado.github.io", "type": "github"}}
+    ],
+    "format": {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
+
+}
