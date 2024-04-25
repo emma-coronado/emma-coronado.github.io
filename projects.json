@@ -2,11 +2,23 @@
     "projects": [
         {"name": "Minesweeper", 
         "tools":"C++ with SFML library", 
-        "description":"Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing."},
+        "description":"Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing.",
+        "link":{"url":"", "type": ""}},
         
-        {"name": "Personal Website", "tools":"HTML, JS, and CSS with Bootstrap framework", 
+        {"name": "Personal Website", 
+        "tools":"HTML, JS, and CSS with Bootstrap framework", 
         "description":"Online portfolio", 
-        "link":{"url":"https://github.com/emma-coronado/emma-coronado.github.io", "type": "github"}}
+        "link":{"url":"https://github.com/emma-coronado/emma-coronado.github.io", "type": "github"}},
+
+        {"name": "Slay Button Chrome Extension", 
+        "tools":"HTML, CSS, JavaScript", 
+        "description":"Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date", 
+        "link":{"url":"https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp?hl=en-GB", "type": "chrome extension"}},
+    
+        {"name": "Original Slay Button", 
+        "tools":"C++ with SFML library", 
+        "description":"First iteration of the slay button. Displays an image of the button that plays the slay sound effect when the inner red circle of the image is clicked.", 
+        "link":{"url":"", "type": "github"}}
     ],
     "format": {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
 
