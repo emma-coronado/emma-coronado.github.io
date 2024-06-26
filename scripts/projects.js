@@ -1,5 +1,5 @@
 async function processJson() {
-    const temp = await fetch ('https://emma-coronado.github.io/projects.json');
+    const temp = await fetch ('https://emmacoronado.com/projects.json');
     const projectInfos = await temp.json();
 
     var toDisplay = "";
