@@ -18,7 +18,24 @@
         {"name": "Original Slay Button", 
         "tools":"C++ with SFML library", 
         "description":"First iteration of the slay button. Displays an image of the button that plays the slay sound effect when the inner red circle of the image is clicked.", 
-        "link":{"url":"", "type": "github"}}
+        "link":{"url":"", "type": "github"}},
+
+        {"name": "GiGa Studios Game Development", 
+        "tools":"Agile, Workflow Management, Java, libGDX, Tiled", 
+        "description":"Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines", 
+        "link":{"url":"", "type": ""}},
+
+        {"name": "Coquette Bows Chrome Extension", 
+        "tools":"Chrome Storage API, Chrome DevTools, and HTML, JS, CSS with Bootstrap framework", 
+        "description":"Coquette Bows Extension, with over 4k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings. The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.", 
+        "link":{"url":"", "type": ""}},
+
+        {"name": "Rx-Warning.com", 
+        "tools":"Crow.cpp/C++ Backend, Figma, HTML, JS, CSS with Bootstrap framework", 
+        "description":"", 
+        "link":{"url":"rx-warning.com", "type": ""}},
+
+        {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
     ],
     "format": {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
 
