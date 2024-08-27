@@ -33,7 +33,7 @@
         {"name": "Rx-Warning.com", 
         "tools":"Crow.cpp/C++ Backend, Figma, HTML, JS, CSS with Bootstrap framework", 
         "description":"", 
-        "link":{"url":"rx-warning.com", "type": ""}},
+        "link":{"url":"rx-warning.com", "type": "url"}},
 
         {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
     ],

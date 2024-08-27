@@ -4,14 +4,17 @@
 .nav-icon {
   font-size: 1.75rem;
   padding: 0%;
-  
+  margin-inline-start: 0.5em;
 }
+
+
 
 .bi-github {
   content: "\F3ED";
   color: black;
   line-height: 0;
   padding-top: 0.15rem;
+  padding-right: 0.01rem;
   height: 1.2em;
   width: 1.2em;
   border-radius: 50%;
@@ -23,4 +26,23 @@
   color: white;
   background-color: black;
 
+}
+
+
+.bi-linkedin {
+  content: "\F472";
+  color: #0077b5;
+  line-height: 0;
+  padding-top: 0.15rem;
+  padding-right: 0.05rem;
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 10%;
+  
+  --bs-btn-active-color: #0077b5;
+}
+
+.bi-linkedin:hover {
+  color: white;
+  background-color: #0077b5;
 }
