@@ -1,13 +1,198 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-
-.nav-icon {
-  font-size: 1.75rem;
-  padding: 0%;
-  margin-inline-start: 0.5em;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@500;600;700;800&amp;display=swap');
+ 
+.solid-shadow {
+    border: var(--borders-width-border, 1px) solid var(--colors-themes-secondary, #2A2A2A);
+    box-shadow: 4px 4px 0px 0px var(--colors-themes-secondary, #2A2A2A);
 }
 
+.solid-shadow:hover {
+    box-shadow: 5px 5px 0px 0px var(--colors-themes-secondary, #2A2A2A);
+    translate: -1px -1px;
+}
 
+.solid-shadow:active {
+    box-shadow: 2px 2px 0px 0px var(--colors-themes-secondary, #2A2A2A);
+    translate: 2px 2px;
+}
+
+/* Need Work  */
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Initial Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6C63FF 0%, #FF6584 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #6C63FF 0%, #FF6584 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.active::after {
+  width: 100%;
+}
+
+.skill-pill {
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Terminal Window */
+
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: rgba(0,0,0,0.05);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.browser-mockup {
+    border-top: 2em solid rgba(230, 230, 230, 0.7);
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.browser-mockup:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -1.25em;
+    left: 1em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: #f44;
+    box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+.browser-mockup:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -1.6em;
+    left: 5.5em;
+    width: 20em;
+    height: 1.2em;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.code-window {
+    font-family: 'Fira Code', monospace;
+    background-color: #1E293B;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #E2E8F0;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-window-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #0F172A;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.window-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.code-window-content {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-line {
+    display: block;
+}
+
+.code-comment {
+    color: #94A3B8;
+}
+
+.code-keyword {
+    color: #F472B6;
+}
+
+.code-string {
+    color: #A3E635;
+}
+
+.code-function {
+    color: #38BDF8;
+}
+
+.code-variable {
+    color: #E879F9;
+}
+
+.code-property {
+    color: #60A5FA;
+}
+
+.code-number {
+    color: #FB923C;
+}
+
+.code-tag {
+    color: #F87171;
+}
+
+.code-attribute {
+    color: #FBBF24;
+}
+
+.code-value {
+    color: #A3E635;
+}
+
+/* Depreciated button styling */
 
 .bi-github {
   content: "\F3ED";
@@ -21,13 +206,11 @@
   
   --bs-btn-active-color: black;
 }
-
 .bi-github:hover {
   color: white;
   background-color: black;
 
 }
-
 
 .bi-linkedin {
   content: "\F472";
@@ -41,7 +224,6 @@
   
   --bs-btn-active-color: #0077b5;
 }
-
 .bi-linkedin:hover {
   color: white;
   background-color: #0077b5;

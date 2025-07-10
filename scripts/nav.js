@@ -1,45 +1,29 @@
-const curPageClass = `active" aria-current="page"`;
-const otherPageClass = `text-black"`;
-
-var AboutClass, ResumeClass, ProjectsClass;
-AboutClass = ResumeClass = ProjectsClass = otherPageClass;
-
-if (window.location.href.includes('resume.html'))
-    ResumeClass = curPageClass;
-else if (window.location.href.includes('projects.html'))
-    ProjectsClass = curPageClass;
-else
-    AboutClass = curPageClass;
-
-
 var navHTML = 
-    `<div class="container mt-3 mb-3">
-        <h1 class="display-1">Emma Coronado</h1>
-    </div>
+    `<nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-display font-bold gradient-text">Emma Coronado</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link font-medium active">About</a>
+                <a href="#projects" class="nav-link font-medium">Projects</a>
+                <a href="#skills" class="nav-link font-medium">Skills</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
         
-    <div class="container sticky-top bg-light-subtle text-emphasis-light">
-        <ul class="nav nav-tabs mb-3">
-            <li class="nav-item">
-                <a class="nav-link ${AboutClass} href="index.html">About Me</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link ${ResumeClass} href="resume.html">Resume</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link ${ProjectsClass} href="projects.html">Projects</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="btn btn-link bi-linkedin nav-icon" href="https://www.linkedin.com/in/emma-coronado-465479298/" role="button"></a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="btn btn-link bi-github nav-icon" href="https://github.com/emma-coronado" role="button"></a>
-            </li>
-            
-        </ul>
-    </div>`;
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white pb-4 px-6">
+            <a href="#about" class="block py-2 font-medium">About</a>
+            <a href="#projects" class="block py-2 font-medium">Projects</a>
+            <a href="#skills" class="block py-2 font-medium">Education</a>
+            <a href="#contact" class="block py-2 font-medium">Contact</a>
+        </div>
+    </nav>`;
 
 document.body.insertAdjacentHTML("afterbegin", navHTML);

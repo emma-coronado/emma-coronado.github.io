@@ -1,38 +1,155 @@
-<!doctype html>
-	
+<!DOCTYPE html>
 <html lang="en">
-  
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Emma Coronado</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<link rel= "stylesheet" href="style.css">	
-	</head>
-  
-	<body class = "bg-light-subtle text-emphasis-light">
-		<script src="scripts/nav.js"></script>
-		
-		<div class= "container-sm">
-			<div class="alert alert-success alert-dismissible fade show" role="alert">
-				<strong>Pardon our dust</strong> This website is still under contruction but feel free to look around :)
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			</div>
-			
-			<div class="card w-100 mb-3">
-				<div class="card-body">
-					<h5 class="card-title">Contact Me</h5>
-					<p class="card-text">	Email: ecoronado@ufl.edu
-										<br>Phone: (305) 720 - 8358
-					</p>
-					
-				</div>
-			</div>
-		</div>
-		
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-	</body>
-  
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Coronado</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Daisy UI -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" /> -->
+</head>
+<body class="font-sans bg-gray-50 text-secondary">
+	<!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+                    Hi, I'm <span class="gradient-text">Emma Coronado</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-display font-semibold mt-2 text-gray-600">
+                    Computer Science Student
+                </h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-lg">
+                    I'm a CS student passionate about creating beautiful, responsive web applications 
+                    with modern technologies. I love bringing designs to life and building seamless user experiences.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects" class="solid-shadow px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all">
+                        View My Projects
+                    </a>
+                    <a href="#contact" class="solid-shadow px-6 py-3 border-primary text-primary font-medium rounded hover:bg-primary/5 transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="mt-10 flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal Window -->
+            <!-- <div class="md:w-1/2 flex justify-center">
+                <div class="code-window w-full max-w-md">
+                    <div class="code-window-header">
+                        <div class="window-circle" style="background-color: #FF5F56;"></div>
+                        <div class="window-circle" style="background-color: #FFBD2E;"></div>
+                        <div class="window-circle" style="background-color: #27C93F;"></div>
+                    </div>
+                    <div class="code-window-content">
+                        <span class="code-line"><span class="code-keyword">import</span> React <span class="code-keyword">from</span> <span class="code-string">'react'</span>;</span>
+                        <span class="code-line"><span class="code-keyword">import</span> { motion } <span class="code-keyword">from</span> <span class="code-string">'framer-motion'</span>;</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-comment">// Developer Portfolio Component</span></span>
+                        <span class="code-line"><span class="code-keyword">const</span> <span class="code-function">Portfolio</span> = () => {</span>
+                        <span class="code-line">  <span class="code-keyword">const</span> <span class="code-variable">skills</span> = [</span>
+                        <span class="code-line">    <span class="code-string">'React'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'TypeScript'</span>,</span>
+                        <span class="code-line">    <span class="code-string">'Node.js'</span>, <span class="code-string">'Tailwind CSS'</span>, <span class="code-string">'MongoDB'</span></span>
+                        <span class="code-line">  ];</span>
+                        <span class="code-line"></span>
+                        <span class="code-line">  <span class="code-keyword">return</span> (</span>
+                        <span class="code-line">    <span class="code-tag"><div></div></span> <span class="code-attribute">className</span>=<span class="code-value">"portfolio"</span><span class="code-tag">></span></span>
+                        <span class="code-line">      <span class="code-tag"><h1></span>Welcome to my portfolio!<span class="code-tag"></h1></span></span>
+                        <span class="code-line">      <span class="code-tag"><p></span>Front-end & Full-stack Developer<span class="code-tag"></p></span></span>
+                        <span class="code-line">      <span class="code-tag"><button></button></span> <span class="code-attribute">onClick</span>=<span class="code-value">{exploreProjects}</span><span class="code-tag">></span></span>
+                        <span class="code-line">        Explore my work</span>
+                        <span class="code-line">      <span class="code-tag"></button></span></span>
+                        <span class="code-line">    <span class="code-tag"></div></span></span>
+                        <span class="code-line">  );</span>
+                        <span class="code-line">};</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-keyword">export</span> <span class="code-keyword">default</span> Portfolio;</span>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Featured Projects</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    A showcase of my projects, featuring responsive designs, 
+                    interactive UIs, and full-stack applications.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="solid-shadow project-card bg-gray-50 rounded-xl overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <div class="browser-mockup bg-gradient-to-br from-primary to-purple-600 h-full">
+                            <div class="flex items-center justify-center h-full text-white">
+                                <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-display font-bold">E-commerce UI</h3>
+                            <span class="text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded-full">Front-End</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            A responsive e-commerce interface with product filtering, cart functionality, and checkout process.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Redux</span>
+                            <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                View Project
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="solid-shadow inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all">
+                    View All Projects
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/nav.js"></script>
+</body>
 </html>

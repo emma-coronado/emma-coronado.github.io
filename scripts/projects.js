@@ -6,13 +6,6 @@ async function processJson() {
 
     for(i in projectInfos.projects) {
         let curProj = projectInfos.projects[i];
-        toDisplay += `<div class="card my-1"><div class="card-body">`;
-
-        toDisplay = toDisplay + `<h5>` + curProj.name + `</h5>`;
-        toDisplay = toDisplay + `<small>` + curProj.tools + `</small><br>`;
-        toDisplay += curProj.description;
-        
-
         toDisplay += `</div></div>`;
     }
 
