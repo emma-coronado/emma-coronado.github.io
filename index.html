@@ -39,10 +39,10 @@
                     </a>
                 </div>
                 <div class="mt-10 flex space-x-4">
-                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/emma-coronado/" class="text-gray-600 hover:text-primary transition-colors">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                    <a href="https://github.com/emma-coronado" class="text-gray-600 hover:text-primary transition-colors">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                     </a>
@@ -149,7 +149,153 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Education & Coursework</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    My academic journey and the key courses that have shaped my knowledge in computer science.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- University Education -->
+                <div class="solid-shadow p-8 rounded-2xl mb-8 bg-white">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold">Bachelor of Science in Computer Science</h3>
+                                    <h4 class="text-lg font-medium text-gray-600">University of Florida</h4>
+                                </div>
+                                <span class="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full mt-1">2023 - 2027 (Expected)</span>
+                            </div>
+                            <p class="mt-4 text-gray-600">
+                                GPA: 3.9/4.0
+                            </p>
+                            <div class="mt-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Coursework -->
+                <div class="p-8 rounded-2xl solid-shadow bg-white">
+                    <h3 class="text-xl font-display font-bold mb-6">Key Coursework:</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="course-list">
+                            <!-- Filled by coursework.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary text-white px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+                    Interested in working together? I'm currently available for internship opportunities 
+                    and freelance projects.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                    <h3 class="text-2xl font-display font-bold mb-6">Send Me a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-primary/30">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start"> <!-- Email  -->
+                            <a href="mailto:ecoronado@ufl.edu" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                            <!-- <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div> -->
+                            <div>
+                                <h4 class="font-display font-semibold">Email</h4>
+                                <a href="mailto:ecoronado@ufl.edu" class="text-gray-300 hover:text-primary transition-colors">ecoronado@ufl.edu</a>
+                            </div>
+                        </div>
+                        
+                         <div class="flex items-start"> <!-- Linked in  -->
+                            <a href="https://www.linkedin.com/in/emma-coronado/" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <div>
+                                <h4 class="font-display font-semibold">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/emma-coronado/" class="text-gray-300 hover:text-primary transition-colors">emma-coronado</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start"> <!-- Github -->
+                            <a href="https://github.com/emma-coronado" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <div>
+                                <h4 class="font-display font-semibold">GitHub</h4>
+                                <a href="https://github.com/emma-coronado" class="text-gray-300 hover:text-primary transition-colors">emma-coronado</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white/70 text-center px-6">
+        <div class="container mx-auto">
+            <p>© <span id="current-year">2025</span> Emma Coronado</p>
+            <p>Built with HTML/CSS/JS, Tailwind CSS</p>
+        </div>
+    </footer>
+
     <script src="scripts/config.js"></script>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/coursework.js"></script>
 </body>
 </html>
