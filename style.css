@@ -10,11 +10,13 @@ body {
     border: var(--borders-width-border, 1px) solid var(--colors-themes-secondary, #2A2A2A);
     box-shadow: 4px 4px 0px 0px var(--colors-themes-secondary, #2A2A2A);
 }
-.solid-shadow:hover {
+button.solid-shadow:hover,
+a.solid-shadow:hover {
     box-shadow: 5px 5px 0px 0px var(--colors-themes-secondary, #2A2A2A);
     translate: -1px -1px;
 }
-.solid-shadow:active {
+button.solid-shadow:active,
+a.solid-shadow:active {
     box-shadow: 2px 2px 0px 0px var(--colors-themes-secondary, #2A2A2A);
     translate: 2px 2px;
 }
@@ -23,11 +25,13 @@ body {
     border: var(--borders-width-border, 1px) solid rgb(255 255 255 / 0.7);
     box-shadow: 4px 4px 0px 0px rgb(255 255 255 / 0.7);
 }
-.light-shadow:hover {
+button.light-shadow:hover,
+a.light-shadow:hover {
     box-shadow: 5px 5px 0px 0px rgb(255 255 255 / 0.7);
     translate: -1px -1px;
 }
-.light-shadow:active {
+button.light-shadow:active,
+a.light-shadow:active {
     box-shadow: 2px 2px 0px 0px rgb(255 255 255 / 0.7);
     translate: 2px 2px;
 }
@@ -54,7 +58,7 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
 }
 
 /* Initial Styles */
