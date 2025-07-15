@@ -37,7 +37,7 @@ async function processJson() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[0].url}" class="text-gray-600 hover:text-gray-900">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
                         </div>
