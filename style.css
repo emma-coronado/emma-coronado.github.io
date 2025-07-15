@@ -32,6 +32,21 @@ body {
     translate: 2px 2px;
 }
 
+.icon-button i,
+.icon-button [class*="bi-"] {
+    transform: translateX(0) translateY(0); 
+    transition: transform .1s ease-in-out;
+    display: inline-block; /* Ensure transform works */
+}
+.icon-button:hover i,
+.icon-button:hover [class*="bi-arrow"] {
+    transform: translateX(3px);
+}
+
+.icon-button:hover [class*="bi-send"] {
+    transform: translateX(3px) translateY(-1px);
+}
+
 /* Need Work  */
 
 .project-card {

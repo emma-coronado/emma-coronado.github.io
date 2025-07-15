@@ -11,5 +11,8 @@ tailwind.config = {
                         display: ['Poppins', 'sans-serif'],
                     },
                 }
+            },
+            variants: {
+                translate: ['hover', 'focus'],
             }
         }
