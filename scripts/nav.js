@@ -8,7 +8,7 @@ var navHTML =
                 <a href="#projects" class="nav-link font-medium pt-1">Projects</a>
                 <a href="#education" class="nav-link font-medium pt-1">Education</a>
                 <a href="#contact" class="nav-link font-medium pt-1">Contact</a>
-                <a href="" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all ">
+                <button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all ">
                     Full Resume
                     <i class="bi bi-box-arrow-up-right pl-1"></i>
                 </a>
@@ -27,7 +27,7 @@ var navHTML =
             <a href="#projects" class="block py-2 font-medium">Projects</a>
             <a href="#education" class="block py-2 font-medium">Education</a>
             <a href="#contact" class="block py-2 font-medium">Contact</a>
-            <a href="" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all">
+            <button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all">
                 Full Resume
                 <i class="bi bi-box-arrow-up-right pl-1"></i>
             </a>
