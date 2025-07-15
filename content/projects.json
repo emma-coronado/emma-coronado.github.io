@@ -1,42 +1,137 @@
 {
-    "projects": [
-        {"name": "Minesweeper", 
-        "tools":"C++ with SFML library", 
-        "description":"Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing.",
-        "link":{"url":"", "type": ""}},
-        
-        {"name": "Personal Website", 
-        "tools":"HTML, JS, and CSS with Bootstrap framework", 
-        "description":"Online portfolio", 
-        "link":{"url":"https://github.com/emma-coronado/emma-coronado.github.io", "type": "github"}},
-
-        {"name": "Slay Button Chrome Extension", 
-        "tools":"HTML, CSS, JavaScript", 
-        "description":"Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date", 
-        "link":{"url":"https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp?hl=en-GB", "type": "chrome extension"}},
-    
-        {"name": "Original Slay Button", 
-        "tools":"C++ with SFML library", 
-        "description":"First iteration of the slay button. Displays an image of the button that plays the slay sound effect when the inner red circle of the image is clicked.", 
-        "link":{"url":"", "type": "github"}},
-
-        {"name": "GiGa Studios Game Development", 
-        "tools":"Agile, Workflow Management, Java, libGDX, Tiled", 
-        "description":"Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines", 
-        "link":{"url":"", "type": ""}},
-
-        {"name": "Coquette Bows Chrome Extension", 
-        "tools":"Chrome Storage API, Chrome DevTools, and HTML, JS, CSS with Bootstrap framework", 
-        "description":"Coquette Bows Extension, with over 4k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings. The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.", 
-        "link":{"url":"", "type": ""}},
-
-        {"name": "Rx-Warning.com", 
-        "tools":"Crow.cpp/C++ Backend, Figma, HTML, JS, CSS with Bootstrap framework", 
-        "description":"", 
-        "link":{"url":"rx-warning.com", "type": "url"}},
-
-        {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
-    ],
-    "format": {"name": "", "tools":"", "description":"", "link":{"url":"", "type": ""}}
-
+  "projects": [
+    {
+      "name": "Portfolio",
+      "tools": [
+        "HTML",
+        "JS",
+        "Bootstrap",
+        "Figma"
+      ],
+      "description": "Online portfolio",
+      "links": [
+        {
+          "url": "https://github.com/emma-coronado/emma-coronado.github.io",
+          "type": "github"
+        }
+      ]
+    },
+    {
+      "name": "Tutor-Bridge.com",
+      "tools": [
+        "HTML",
+        "JS",
+        "Bootstrap",
+        "React",
+        "Spring",
+        "PostgreSQL"
+      ],
+      "description": "Full-Stack app built to connect student tutors to peers in need.",
+      "links": [
+        {
+          "url": "https://github.com/Dogantoro/Tutor-Bridge",
+          "type": "github"
+        }
+      ]
+    },
+    {
+      "name": "Rx-Warning.com",
+      "tools": [
+        "HTML",
+        "JS",
+        "Bootstrap",
+        "Figma"
+      ],
+      "description": "Responsive UI to dynamically display drug interaction data, leveraging adjacency lists and matrices for optimized search performance.",
+      "links": [
+        {
+          "url": "https://github.com/Dogantoro/rx-warning",
+          "type": "github"
+        },
+        {
+          "url": "https://youtu.be/qS-0V51hbko",
+          "type": "youtube"
+        }
+      ]
+    },
+    {
+      "name": "Coquette Bows Chrome Extension",
+      "tools": [
+        "Chrome Storage API",
+        "HTML",
+        "JS",
+        "Bootstrap"
+      ],
+      "description": "Coquette Bows Extension, with over 4k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings. The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.",
+      "links": [
+        {
+          "url": "https://github.com/Dogantoro/rx-warning",
+          "type": "github"
+        },
+        {
+          "url": "https://chromewebstore.google.com/detail/coquette-bows-extension/iakojhpeaoimjhbaelkgbdahchckiieg",
+          "type": "cws"
+        }
+      ]
+    },
+    {
+      "name": "GiGa Studios Game Development",
+      "tools": [
+        "Agile",
+        "Workflow Management",
+        "Java",
+        "libGDX",
+        "Tiled"
+      ],
+      "description": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines"
+    },
+    {
+      "name": "Sound Button Chrome Extension",
+      "tools": [
+        "HTML",
+        "JS",
+        "Bootstrap"
+      ],
+      "description": "Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date",
+      "links": [
+        {
+          "url": "https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp",
+          "type": "cws"
+        }
+      ]
+    },
+    {
+      "name": "Minesweeper",
+      "tools": [
+        "C++",
+        "SFML"
+      ],
+      "description": "Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing.",
+      "images": "minesweeper.png"
+    },
+    {
+      "name": "Accessible Design Practice",
+      "tools": [
+        "HTML",
+        "JS",
+        "Figma"
+      ],
+      "links": {
+        "url": "https://github.com/emma-coronado/AccessibleDesignPractice",
+        "type": "github"
+      }
+    },
+    {
+      "name": "Water Conscious Gators",
+      "tools": [
+        "HTML",
+        "JS",
+        "Bootstrap"
+      ],
+      "links": {
+        "url": "https://github.com/emma-coronado/WaterConsciousGators",
+        "type": "github"
+      }
+    }
+  ]
 }
