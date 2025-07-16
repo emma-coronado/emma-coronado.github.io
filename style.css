@@ -2,8 +2,17 @@
 @import url("https://rsms.me/inter/inter.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  
+:root {
+    --color-primary: #4a43bf;
+}
+
 body {
     font-variant-numeric: slashed-zero;
+}
+
+button, a { /* Accessibility min sizes */
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .solid-shadow {
@@ -68,7 +77,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #6C63FF 0%, #FF6584 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, #FF6584 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -82,9 +91,9 @@ html {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -4px;
+  bottom: 10px;
   left: 0;
-  background: linear-gradient(90deg, #6C63FF 0%, #FF6584 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, #FF6584 100%);
   transition: width 0.3s ease;
 }
 
@@ -94,6 +103,10 @@ html {
 
 .active::after {
   width: 100%;
+}
+
+#openResumeBtn {
+    min-height: 44px;
 }
 
 .skill-pill {
