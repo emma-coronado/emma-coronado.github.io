@@ -2,12 +2,43 @@
 @import url("https://rsms.me/inter/inter.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  
-:root {
+:root:has(input.theme-controller[value=lightMode]:checked),[data-theme="lightMode"] {
+    color-scheme: light;
+
     --color-primary: #4a43bf;
+    --color-primary-content: #F9FAFB;
+    --color-secondary: #2A2A2A;
+    --color-secondary-content: #FEFFFF;
+    --color-accent: #FF6584;
+    --color-accent-content: #2A2A2A;
+
+    --color-neutral: #52525B;
+}
+
+:root:has(input.theme-controller[value=darkMode]:checked),[data-theme="darkMode"] {
+    color-scheme: dark;
+
+    --color-primary: #7582FF;
+    --color-primary-content: #0F172A;
+    --color-secondary: #E2E8F0;
+    --color-secondary-content: #1C2739;
+    --color-accent: #00C7B5;
+    --color-accent-content: #1C2739;
+
+    --color-neutral: #DFE2E6;
+}
+
+:root {
+    --font-sans: 'Inter', 'sans-serif';
+    --font-display: 'Poppins', 'sans-serif';
 }
 
 body {
     font-variant-numeric: slashed-zero;
+}
+
+p {
+    color: var(--color-neutral);
 }
 
 button, a { /* Accessibility min sizes */
@@ -16,17 +47,17 @@ button, a { /* Accessibility min sizes */
 }
 
 .solid-shadow {
-    border: var(--borders-width-border, 1px) solid var(--colors-themes-secondary, #2A2A2A);
-    box-shadow: 4px 4px 0px 0px var(--colors-themes-secondary, #2A2A2A);
+    border: var(--borders-width-border, 1px) solid var(--color-secondary);
+    box-shadow: 4px 4px 0px 0px var(--color-secondary);
 }
 button.solid-shadow:hover,
 a.solid-shadow:hover {
-    box-shadow: 5px 5px 0px 0px var(--colors-themes-secondary, #2A2A2A);
+    box-shadow: 5px 5px 0px 0px var(--color-secondary);
     translate: -1px -1px;
 }
 button.solid-shadow:active,
 a.solid-shadow:active {
-    box-shadow: 2px 2px 0px 0px var(--colors-themes-secondary, #2A2A2A);
+    box-shadow: 2px 2px 0px 0px var(--color-secondary);
     translate: 2px 2px;
 }
 
@@ -77,7 +108,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, var(--color-primary) 0%, #FF6584 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -93,7 +124,7 @@ html {
   height: 2px;
   bottom: 10px;
   left: 0;
-  background: linear-gradient(90deg, var(--color-primary) 0%, #FF6584 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
   transition: width 0.3s ease;
 }
 
@@ -118,14 +149,14 @@ html {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.modal {
+.modalRS {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.modal-content {
+.modal-contentRS {
     transform: scale(0.95);
     transition: transform 0.3s ease;
 }
-.modal.active .modal-content {
+.modalRS.active .modal-contentRS {
     transform: scale(1);
 }
 
