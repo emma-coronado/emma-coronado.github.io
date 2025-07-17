@@ -10,7 +10,7 @@ async function processJson() {
 
         let toolPills = "";
         for(n in curProj.tools) {
-            toolPills += `<badge class="badge badge-ghost">${curProj.tools[n]}</badge>`;
+            toolPills += `<badge class="badge badge-outline badge-neutral">${curProj.tools[n]}</badge>`;
         }
 
         toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
