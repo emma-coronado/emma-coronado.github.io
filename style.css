@@ -41,6 +41,10 @@ p {
     color: var(--color-neutral);
 }
 
+footer p {
+    color: var(--color-gray-300);
+}
+
 button, a { /* Accessibility min sizes */
     min-height: 44px;
     min-width: 44px;

@@ -26,9 +26,9 @@
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
                     Hi, I'm <span class="gradient-text">Emma Coronado</span>
                 </h1>
-                <h2 class="text-2xl md:text-3xl font-display font-semibold mt-2 text-gray-600">
+                <p class="text-2xl md:text-3xl font-display font-semibold mt-2">
                     Computer Science Student
-                </h2>
+                </p>
                 <p class="mt-6 text-lg max-w-lg">
                     I'm a CS student passionate about creating beautiful, responsive web applications 
                     with modern technologies. I love bringing designs to life and building seamless user experiences.
@@ -41,11 +41,11 @@
                         Get In Touch
                     </a>
                 </div>
-                <div class="mt-10 flex">
-                    <a href="https://www.linkedin.com/in/emma-coronado/" target="_blank" title="View Emma's LinkedIn in a new tab." class="text-gray-600 hover:text-primary transition-colors">
+                <div class="mt-10 flex text-neutral">
+                    <a href="https://www.linkedin.com/in/emma-coronado/" target="_blank" title="View Emma's LinkedIn in a new tab." class="hover:text-primary transition-colors">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="https://github.com/emma-coronado" target="_blank" title="View Emma's GitHub profile in a new tab." class="text-gray-600 hover:text-primary transition-colors">
+                    <a href="https://github.com/emma-coronado" target="_blank" title="View Emma's GitHub profile in a new tab." class="hover:text-primary transition-colors">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                 </div>
@@ -139,7 +139,7 @@
                             <div class="flex flex-wrap justify-between items-start">
                                 <div>
                                     <h3 class="text-xl font-display font-bold">Bachelor of Science in Computer Science</h3>
-                                    <h4 class="text-lg font-medium text-gray-600">University of Florida</h4>
+                                    <h4 class="text-lg font-medium text-neutral">University of Florida</h4>
                                 </div>
                                 <span class="text-sm font-medium text-primary px-3 py-1 rounded-full ml-3 border border-primary">2023 - 2027 (Expected)</span>
                             </div>
@@ -173,7 +173,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-display font-bold">Get In Touch</h2>
                 <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
-                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+                <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:white;">
                     Interested in working together? I'm currently available for internship opportunities 
                     and freelance projects.
                 </p>
@@ -255,8 +255,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 text-white/70 text-center px-6">
-        <div class="container mx-auto">
+    <footer class="py-8 bg-gray-900 text-center px-6">
+        <div class="container mx-auto text-white">
             <p>© <span id="current-year">2025</span> Emma Coronado</p>
             <p>Built with HTML/CSS/JS, Tailwind CSS</p>
         </div>
@@ -287,6 +287,7 @@
 
     <!-- theme toggle -->
     <div class="toast">
+        <div class="badge bg-secondary-content/70 rounded-full border-neutral/70 h-15 text-secondary">
         <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" class="theme-controller" value="darkMode" />
@@ -300,7 +301,8 @@
             <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
             </svg>
-        </label>
+        
+        </label></div>
     </div>
 
     <script src="scripts/nav.js"></script>

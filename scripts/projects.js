@@ -10,7 +10,7 @@ async function processJson() {
 
         let toolPills = "";
         for(n in curProj.tools) {
-            toolPills += `<span class="text-xs bg-gray-200 px-2 py-1 rounded-full">${curProj.tools[n]}</span>`;
+            toolPills += `<badge class="badge badge-ghost">${curProj.tools[n]}</badge>`;
         }
 
         toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
@@ -28,7 +28,7 @@ async function processJson() {
                             <h3 class="text-2xl font-display font-extrabold">${curProj.name}</h3>
                             <span class="text-xs font-medium text-primary px-3 py-1 rounded-full ml-3 border border-primary">Front-End</span>
                         </div>
-                        <p class="text-gray-600 mb-4">${curProj.description}</p>
+                        <p class="mb-4">${curProj.description}</p>
                         <div class="flex flex-wrap gap-2 mb-6">${toolPills}</div>
                         <div class="flex justify-between">
                             <a href="#" class="text-primary font-medium flex items-center hover:underline">
@@ -37,7 +37,7 @@ async function processJson() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </a>
-                            <a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[0].url}" class="text-gray-600 hover:text-gray-900">
+                            <a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[0].url}" class="text-neutral hover:text-gray-900">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
                         </div>
