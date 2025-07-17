@@ -13,7 +13,7 @@ async function processJson() {
             toolPills += `<span class="text-xs bg-gray-200 px-2 py-1 rounded-full">${curProj.tools[n]}</span>`;
         }
 
-        toDisplay += `<div class="solid-shadow project-card bg-gray-50 rounded-xl overflow-hidden">
+        toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
                     <div class="h-56 overflow-hidden">
                         <div class="browser-mockup bg-gradient-to-br from-primary to-purple-600 h-full">
                             <div class="flex items-center justify-center h-full text-white">

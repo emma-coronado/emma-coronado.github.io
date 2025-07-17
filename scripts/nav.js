@@ -1,5 +1,5 @@
 var navHTML = 
-    `<nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+    `<nav class="fixed w-full bg-secondary-content/90 backdrop-blur-sm z-50 shadow-sm">
         <div class="container mx-auto px-6 py-1 flex justify-between items-center">
             <a href="#" class="text-2xl font-display font-bold gradient-text py-2">Emma Coronado</a>
             
