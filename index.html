@@ -263,9 +263,11 @@
 
         <!-- Resume Modal -->
     <div id="resumeModal" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden opacity-0 invisible">
-        <div class="modal-content bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto mx-4">
-            <div class="sticky top-0 bg-white z-10 border-b border-gray-200">
-                <div class="flex justify-between items-center p-6">
+        <div class="modal-content bg-white rounded-xl shadow-2xl w-full max-w-5xl h-3/4 overflow-y-auto mx-4">
+            <div class="top-0 bg-white border-b border-gray-200 h-min">
+                <div class="flex justify-between items-center px-6 py-4">
+                    <h2 class="text-2xl font-display font-bold gradient-text py-2">Resume</h2>
+
                     <button id="closeResumeBtn" class="text-gray-500 hover:text-gray-700 focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -273,7 +275,11 @@
                     </button>
                 </div>
             </div>
-            <div class="p-6">
+            <div class="p-6 h-full object-contain">
+                <object data="assets/EmmaCoronado_Resume.pdf" type="application/pdf" class="w-full h-full rounded-lg" style="border:1px solid #ccc;">
+                    <p>Your browser does not support PDFs.
+                    <a href="assets/EmmaCoronado_Resume.pdf">Download the PDF</a>.</p>
+                </object>
             </div>
         </div>
     </div>
