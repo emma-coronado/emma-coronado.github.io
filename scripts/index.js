@@ -4,10 +4,21 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 // Modal functionality
 const modal = document.getElementById('resumeModal');
 const openBtn = document.getElementById('openResumeBtn');
+const openBtn2 = document.getElementById('openResumeBtn2');
 const closeBtn = document.getElementById('closeResumeBtn');
 const downloadBtn = document.getElementById('downloadResumeBtn');
 
 openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.add('active');
+        modal.classList.remove('invisible');
+        modal.classList.add('opacity-100');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+});
+
+openBtn2.addEventListener('click', () => {
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.classList.add('active');
