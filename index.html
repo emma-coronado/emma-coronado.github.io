@@ -36,10 +36,10 @@
                     with modern technologies. I love bringing designs to life and building seamless user experiences.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="#projects" class="solid-shadow px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all">
+                    <a href="#projects" title="Scroll to Project Section" class="solid-shadow px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all">
                         View My Projects
                     </a>
-                    <a href="#contact" class="solid-shadow px-6 py-3 border-primary text-primary font-medium rounded hover:bg-primary/5 transition-all">
+                    <a href="#contact" title="Scroll to Contact Section" class="solid-shadow px-6 py-3 border-primary text-primary font-medium rounded hover:bg-primary/5 transition-all">
                         Get In Touch
                     </a>
                 </div>
@@ -107,8 +107,8 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="/projects.html" title="" class="icon-button solid-shadow inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all w-full place-content-center">
-                    View All Projects
+                <a href="https://github.com/emma-coronado?tab=repositories" title="View More Projects on GitHub" target="_blank" class="icon-button solid-shadow inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all w-full place-content-center">
+                    View More Projects
                     <i class="bi bi-arrow-right pl-2"></i>
                 </a>
             </div>
@@ -175,7 +175,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-display font-bold">Get In Touch</h2>
                 <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
-                <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:white;">
+                <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:white; background: var(--color-accent-content);">
                     Interested in working together? I'm currently available for internship opportunities 
                     and freelance projects.
                 </p>
@@ -254,24 +254,15 @@
             </div>
         </div>
     </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-gray-900 text-center px-6">
-        <div class="container mx-auto text-white">
-            <p>© <span id="current-year">2025</span> Emma Coronado</p>
-            <p>Built with HTML/CSS/JS, Tailwind CSS</p>
-        </div>
-    </footer>
 
-        <!-- Resume Modal -->
     <div id="resumeModal" class="modalRS fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden opacity-0 invisible">
         <div class="modal-contentRS bg-secondary-content rounded-xl shadow-2xl w-full max-w-5xl overflow-y-auto mx-4 h-9/10">
             <div class="top-0 shadow-lg">
                 <div class="flex justify-between items-center px-6 py-3">
                     <h2 class="text-2xl font-display font-bold gradient-text py-2">Resume</h2>
 
-                    <button id="closeResumeBtn" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <button id="closeResumeBtn" class="text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Close">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -284,15 +275,29 @@
                     <a href="assets/EmmaCoronado_Resume.pdf">Download the PDF</a>.</p>
                 </object>
             </div>
+            
         </div>
     </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-center px-6">
+        <div class="container mx-auto text-white">
+            <p>© <span id="current-year">2025</span> Emma Coronado</p>
+            <p>Built with HTML/CSS/JS, Tailwind CSS</p>
+        </div>
+    </footer>
+
+        <!-- Resume Modal -->
+    
 
     <!-- theme toggle -->
     <div class="toast">
         <div class="badge bg-secondary-content/70 rounded-full border-neutral/70 h-15 text-secondary">
         <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
-            <input type="checkbox" class="theme-controller" value="darkMode" />
+            <input type="checkbox" class="theme-controller" value="darkMode" aria-label="Color Theme Toggle"/>
 
             <!-- sun icon -->
             <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -15,11 +15,8 @@ async function processJson() {
 
         toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
                     <div class="h-56 overflow-hidden">
-                        <div class="browser-mockup bg-gradient-to-br from-primary to-purple-600 h-full">
-                            <div class="flex items-center justify-center h-full text-white">
-                                <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
+                        <div class="browser-mockup bg-gradient-to-br from-indigo-600 to-pink-400 h-full">
+                            <div class="flex items-center justify-center h-full text-white w-24">
                             </div>
                         </div>
                     </div>
@@ -31,12 +28,7 @@ async function processJson() {
                         <p class="mb-4">${curProj.description}</p>
                         <div class="flex flex-wrap gap-2 mb-6">${toolPills}</div>
                         <div class="flex justify-between">
-                            <a href="#" class="text-primary font-medium flex items-center hover:underline">
-                                View Project
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
+                            <div></div>
                             <a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[0].url}" class="text-neutral hover:text-gray-900">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
