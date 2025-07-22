@@ -1,38 +1,321 @@
-<!doctype html>
-	
-<html lang="en">
-  
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Emma Coronado</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<link rel= "stylesheet" href="style.css">	
-	</head>
-  
-	<body class = "bg-light-subtle text-emphasis-light">
-		<script src="scripts/nav.js"></script>
-		
-		<div class= "container-sm">
-			<div class="alert alert-success alert-dismissible fade show" role="alert">
-				<strong>Pardon our dust</strong> This website is still under contruction but feel free to look around :)
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			</div>
-			
-			<div class="card w-100 mb-3">
-				<div class="card-body">
-					<h5 class="card-title">Contact Me</h5>
-					<p class="card-text">	Email: ecoronado@ufl.edu
-										<br>Phone: (305) 720 - 8358
-					</p>
-					
-				</div>
-			</div>
-		</div>
-		
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-	</body>
-  
-  
+<!DOCTYPE html>
+<html lang="en" data-theme="lightMode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Coronado | Portfolio</title>
+    <meta name="description" content="Computer Science student project portfolio.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />	
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-primary-content text-secondary">
+    <main>
+
+	<!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+                    Hi, I'm <span class="gradient-text">Emma Coronado</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-display font-semibold mt-2">
+                    Computer Science Student
+                </p>
+                <p class="mt-6 text-lg max-w-lg">
+                    I'm a CS student passionate about creating beautiful, responsive web applications 
+                    with modern technologies. I love bringing designs to life and building seamless user experiences.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects" title="Scroll to Project Section" class="solid-shadow px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all">
+                        View My Projects
+                    </a>
+                    <a href="#contact" title="Scroll to Contact Section" class="solid-shadow px-6 py-3 border-primary text-primary font-medium rounded hover:bg-primary/5 transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="mt-10 flex text-neutral">
+                    <a href="https://www.linkedin.com/in/emma-coronado/" target="_blank" title="View Emma's LinkedIn in a new tab." class="hover:text-primary transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/emma-coronado" target="_blank" title="View Emma's GitHub profile in a new tab." class="hover:text-primary transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal Window -->
+            <!-- <div class="md:w-1/2 flex justify-center">
+                <div class="code-window w-full max-w-md">
+                    <div class="code-window-header">
+                        <div class="window-circle" style="background-color: #FF5F56;"></div>
+                        <div class="window-circle" style="background-color: #FFBD2E;"></div>
+                        <div class="window-circle" style="background-color: #27C93F;"></div>
+                    </div>
+                    <div class="code-window-content">
+                        <span class="code-line"><span class="code-keyword">import</span> React <span class="code-keyword">from</span> <span class="code-string">'react'</span>;</span>
+                        <span class="code-line"><span class="code-keyword">import</span> { motion } <span class="code-keyword">from</span> <span class="code-string">'framer-motion'</span>;</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-comment">// Developer Portfolio Component</span></span>
+                        <span class="code-line"><span class="code-keyword">const</span> <span class="code-function">Portfolio</span> = () => {</span>
+                        <span class="code-line">  <span class="code-keyword">const</span> <span class="code-variable">skills</span> = [</span>
+                        <span class="code-line">    <span class="code-string">'React'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'TypeScript'</span>,</span>
+                        <span class="code-line">    <span class="code-string">'Node.js'</span>, <span class="code-string">'Tailwind CSS'</span>, <span class="code-string">'MongoDB'</span></span>
+                        <span class="code-line">  ];</span>
+                        <span class="code-line"></span>
+                        <span class="code-line">  <span class="code-keyword">return</span> (</span>
+                        <span class="code-line">    <span class="code-tag"><div></div></span> <span class="code-attribute">className</span>=<span class="code-value">"portfolio"</span><span class="code-tag">></span></span>
+                        <span class="code-line">      <span class="code-tag"><h1></span>Welcome to my portfolio!<span class="code-tag"></h1></span></span>
+                        <span class="code-line">      <span class="code-tag"><p></span>Front-end & Full-stack Developer<span class="code-tag"></p></span></span>
+                        <span class="code-line">      <span class="code-tag"><button></button></span> <span class="code-attribute">onClick</span>=<span class="code-value">{exploreProjects}</span><span class="code-tag">></span></span>
+                        <span class="code-line">        Explore my work</span>
+                        <span class="code-line">      <span class="code-tag"></button></span></span>
+                        <span class="code-line">    <span class="code-tag"></div></span></span>
+                        <span class="code-line">  );</span>
+                        <span class="code-line">};</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-keyword">export</span> <span class="code-keyword">default</span> Portfolio;</span>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary-content px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Featured Projects</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg max-w-2xl mx-auto">
+                    A showcase of my projects, featuring responsive designs, 
+                    interactive UIs, and full-stack applications.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-cards">
+                <!-- Project cards added by scripts/projects.js -->
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://github.com/emma-coronado?tab=repositories" title="View More Projects on GitHub" target="_blank" class="icon-button solid-shadow inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-all w-full place-content-center">
+                    View More Projects
+                    <i class="bi bi-arrow-right pl-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Education & Coursework</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg max-w-2xl mx-auto">
+                    My academic journey and the key courses that have shaped my knowledge in computer science.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- University Education -->
+                <div class="solid-shadow p-8 rounded-2xl mb-8 bg-primary-content">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold">Bachelor of Science in Computer Science</h3>
+                                    <h4 class="text-lg font-medium text-neutral">University of Florida</h4>
+                                </div>
+                                <span class="text-sm font-medium text-primary px-3 py-1 rounded-full ml-3 border border-primary">2023 - 2027 (Expected)</span>
+                            </div>
+                            <p class="mt-4 font-sans">
+                                GPA: 3.9/4.0
+                            </p>
+                            <div class="mt-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Coursework -->
+                <div class="p-8 rounded-2xl solid-shadow bg-primary-content">
+                    <h3 class="text-xl font-display font-bold mb-6">Key Coursework:</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="course-list">
+                            <!-- Filled by coursework.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-accent-content text-white px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:white; background: var(--color-accent-content);">
+                    Interested in working together? I'm currently available for internship opportunities 
+                    and freelance projects.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl light-shadow">
+                    <h3 class="text-2xl font-display font-bold mb-6">Send Me a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="99a9b625-77cc-4bb6-ad13-eb96fa8eafc5">
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input name="name" type="text" id="name" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input name="email" type="email" id="email" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="icon-button w-full px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-all light-shadow">
+                            Send Message
+                            <i class="bi bi-send pl-1"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start"> <!-- Email  -->
+                            <a href="mailto:ecoronado@ufl.edu" title="Email Emma at ecoronado@ufl.edu" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                            <!-- <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div> -->
+                            <div>
+                                <h4 class="font-display font-semibold">Email</h4>
+                                <a href="mailto:ecoronado@ufl.edu" class="text-gray-300 hover:text-primary transition-colors">ecoronado@ufl.edu</a>
+                            </div>
+                        </div>
+                        
+                         <div class="flex items-start"> <!-- Linked in  -->
+                            <a href="https://www.linkedin.com/in/emma-coronado/" title="View Emma's LinkedIn profile in a new tab." target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <div>
+                                <h4 class="font-display font-semibold">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/emma-coronado/" class="text-gray-300 hover:text-primary transition-colors">emma-coronado</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start"> <!-- Github -->
+                            <a href="https://github.com/emma-coronado" title="View Emma's GitHub profile in a new tab." target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all mr-4">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <div>
+                                <h4 class="font-display font-semibold">GitHub</h4>
+                                <a href="https://github.com/emma-coronado" class="text-gray-300 hover:text-primary transition-colors">emma-coronado</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="resumeModal" class="modalRS fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden opacity-0 invisible">
+        <div class="modal-contentRS bg-secondary-content rounded-xl shadow-2xl w-full max-w-5xl overflow-y-auto mx-4 h-9/10">
+            <div class="top-0 shadow-lg">
+                <div class="flex justify-between items-center px-6 py-3">
+                    <h2 class="text-2xl font-display font-bold gradient-text py-2">Resume</h2>
+
+                    <button id="closeResumeBtn" class="text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6 object-contain h-9/10">
+                <object data="assets/EmmaCoronado_Resume.pdf" type="application/pdf" class="w-full h-full rounded-lg">
+                    <p>Your browser does not support PDFs.
+                    <a href="assets/EmmaCoronado_Resume.pdf">Download the PDF</a>.</p>
+                </object>
+            </div>
+            
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-center px-6">
+        <div class="container mx-auto text-white">
+            <p>© <span id="current-year">2025</span> Emma Coronado</p>
+            <p>Built with HTML/CSS/JS, Tailwind CSS</p>
+        </div>
+    </footer>
+
+        <!-- Resume Modal -->
+    
+
+    <!-- theme toggle -->
+    <div class="toast">
+        <div class="badge bg-secondary-content/70 rounded-full border-neutral/70 h-15 text-secondary">
+        <label class="swap swap-rotate">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" class="theme-controller" value="darkMode" aria-label="Color Theme Toggle"/>
+
+            <!-- sun icon -->
+            <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+            </svg>
+
+            <!-- moon icon -->
+            <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+            </svg>
+        
+        </label></div>
+    </div>
+
+
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/coursework.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/projects.js"></script>
+</body>
 </html>

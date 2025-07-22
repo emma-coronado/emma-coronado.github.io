@@ -1,0 +1,48 @@
+{
+    "courses": [
+        {
+            "name":"Data Structures and Algorithms"
+        },
+
+        {
+            "name":"Intro. to Software Engineering"
+        },
+
+        {
+            "name":"Enterprise Software Engineering"
+        },
+
+        {
+            "name":"Information and Database Systems"
+        },
+
+        {
+            "name":"Operating Systems"
+        },
+
+        {
+            "name":"Engineering Project Management"
+        },
+
+        {
+            "name":"Programming Language Concepts"
+        },
+
+        {
+            "name":"Computer Organization"
+        },
+
+        {
+            "name":"Engineering Economy"
+        },
+        
+        {
+            "name":"Computer Science Teaching and Learning"
+        },
+
+        {
+            "name":"Professional Communication for Engineers"
+        }
+        
+    ]
+}
