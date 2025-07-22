@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Coronado</title>
+    <title>Emma Coronado | Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Tailwind -->
@@ -17,44 +17,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans bg-primary-content text-secondary">
-    <main>
-		<nav class="fixed w-full bg-secondary-content/90 backdrop-blur-sm z-50 shadow-sm">
-			<div class="container mx-auto px-6 py-1 flex justify-between items-center">
-				<a href="/index.html#projects" id="" class="text-gray-500 hover:text-gray-700 flex space-x-6">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mt-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-					<p class="text-2xl font-display font-bold gradient-text py-2">Return to Home</p>
-				</a>
-				
-				
-				<div class="hidden lg:flex space-x-8">
-					<button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 my-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all ">
-						Full Resume
-						<i class="bi bi-box-arrow-up-right pl-1"></i>
-					</a>
-				</div>
-				
-				<button id="mobile-menu-button" aria-label="Open Navigation Menu" class="lg:hidden focus:outline-none">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-					</svg>
-				</button>
-			</div>
+    <nav class="fixed w-full bg-secondary-content/90 backdrop-blur-sm z-50 shadow-sm ">
+		<div class="container mx-auto px-6 py-1 flex justify-between items-center">
+			<a href="/index.html#projects" id="" class="text-neutral hover:text-primary flex space-x-6">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" class="mt-2" fill="none" viewBox="0 0 16 16" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
+				</svg>
+				<p class="text-2xl font-display font-bold gradient-text py-2">Emma Coronado</p>
+			</a>
 			
-			<!-- Mobile Menu -->
-			<div id="mobile-menu" class="lg:hidden hidden bg-white pb-5 px-6">
-				<a href="#about" class="block py-2 font-medium">About</a>
-				<a href="#projects" class="block py-2 font-medium">Projects</a>
-				<a href="#education" class="block py-2 font-medium">Education</a>
-				<a href="#contact" class="block py-2 font-medium">Contact</a>
-				<button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all">
+			
+			<div class="hidden lg:flex space-x-8">
+				<button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 my-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all ">
 					Full Resume
 					<i class="bi bi-box-arrow-up-right pl-1"></i>
 				</a>
 			</div>
-		</nav>
-
+			
+			<button id="mobile-menu-button" aria-label="Open Navigation Menu" class="lg:hidden focus:outline-none">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+		
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="lg:hidden hidden bg-white pb-5 px-6">
+			<a href="#about" class="block py-2 font-medium">About</a>
+			<a href="#projects" class="block py-2 font-medium">Projects</a>
+			<a href="#education" class="block py-2 font-medium">Education</a>
+			<a href="#contact" class="block py-2 font-medium">Contact</a>
+			<button id="openResumeBtn" class="leading-none solid-shadow px-4 py-2 bg-primary text-white font-normal rounded hover:bg-opacity-90 transition-all">
+				Full Resume
+				<i class="bi bi-box-arrow-up-right pl-1"></i>
+			</a>
+		</div>
+	</nav>
+	<main>
+		<div class="container mx-auto pt-32">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl md:text-4xl font-display font-bold">Projects</h1>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="mt-6 text-lg max-w-2xl mx-auto">
+                    A showcase of my projects, featuring responsive designs, 
+                    interactive UIs, and full-stack applications.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-cards">
+                <!-- Project cards added by scripts/projects.js -->
+            </div>
+        </div>
 	</main>
+	<script src="scripts/projects.js">var full = true; </script>
 </body>
 </html>
