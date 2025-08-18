@@ -51,10 +51,12 @@ document.getElementById("moreProjBtn").onclick = function() {
     if (projNum == 3) {
         projNum = -1;
         document.getElementById("moreProjBtn").innerText = "View Fewer Projects";
+        document.getElementById("moreProjBtn").title = "View Fewer Projects";
     }
     else {
         projNum = 3;
         document.getElementById("moreProjBtn").innerText = "View More Projects";
+        document.getElementById("moreProjBtn").title = "View More Projects";
     }
 
     // re-render cards
