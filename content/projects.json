@@ -1,30 +1,15 @@
 {
   "projects": [
     {
-      "name": "Portfolio",
-      "tools": [
-        "HTML",
-        "JS",
-        "Bootstrap",
-        "Figma"
-      ],
-      "description": "Online portfolio",
-      "links": [
-        {
-          "url": "https://github.com/emma-coronado/emma-coronado.github.io",
-          "type": "github"
-        }
-      ]
-    },
-    {
       "name": "Tutor-Bridge.com",
       "tools": [
-        "HTML",
-        "JS",
-        "Bootstrap",
         "React",
         "Spring",
-        "PostgreSQL"
+        "PostgreSQL",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap"
       ],
       "description": "Full-Stack app built to connect student tutors to peers in need.",
       "links": [
@@ -37,10 +22,11 @@
     {
       "name": "Rx-Warning.com",
       "tools": [
-        "HTML",
         "JS",
-        "Bootstrap",
-        "Figma"
+        "HTML",
+        "Figma",
+        "CSS",
+        "Bootstrap"
       ],
       "description": "Responsive UI to dynamically display drug interaction data, leveraging adjacency lists and matrices for optimized search performance.",
       "links": [
@@ -55,14 +41,32 @@
       ]
     },
     {
+      "name": "Portfolio",
+      "tools": [
+        "JS",
+        "HTML",
+        "Figma",
+        "CSS",
+        "Tailwind CSS"
+      ],
+      "description": "Online portfolio",
+      "links": [
+        {
+          "url": "https://github.com/emma-coronado/emma-coronado.github.io",
+          "type": "github"
+        }
+      ]
+    },
+    {
       "name": "Coquette Bows Chrome Extension",
       "tools": [
         "Chrome Storage API",
-        "HTML",
         "JS",
+        "HTML",
         "Bootstrap"
       ],
-      "description": "Coquette Bows Extension, with over 4k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings. The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.",
+      "description": "Coquette Bows Extension, with over 10k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings.",
+      "explanation": "The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.",
       "links": [
         {
           "url": "https://github.com/Dogantoro/rx-warning",
@@ -83,7 +87,8 @@
         "libGDX",
         "Tiled"
       ],
-      "description": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines"
+      "description": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game.",
+      "explanation": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines"
     },
     {
       "name": "Sound Button Chrome Extension",
@@ -92,7 +97,8 @@
         "JS",
         "Bootstrap"
       ],
-      "description": "Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date",
+      "description": "Simple sound effect button popup and with hundreds of users to date.",
+      "explanation": "Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date",
       "links": [
         {
           "url": "https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp",
@@ -116,22 +122,37 @@
         "JS",
         "Figma"
       ],
-      "links": {
-        "url": "https://github.com/emma-coronado/AccessibleDesignPractice",
-        "type": "github"
-      }
+      "description": "Website centered around accessible web practices to practice accessibility centered development.",
+      "links": [
+        {
+          "url": "https://github.com/emma-coronado/WaterConsciousGators",
+          "type": "github"
+        },
+        {
+          "url": "https://emmacoronado.com/AccessibleDesignPractice/",
+          "type": "website"
+        }
+      ]
     },
     {
       "name": "Water Conscious Gators",
       "tools": [
-        "HTML",
         "JS",
+        "HTML",
+        "CSS",
         "Bootstrap"
       ],
-      "links": {
-        "url": "https://github.com/emma-coronado/WaterConsciousGators",
-        "type": "github"
-      }
+      "description": "Personal water usage calculator bulit to bring awareness to the impact individuals can have on drought prevention.",
+      "links": [
+        {
+          "url": "https://github.com/emma-coronado/WaterConsciousGators",
+          "type": "github"
+        },
+        {
+          "url": "https://github.com/emma-coronado/WaterConsciousGators",
+          "type": "website"
+        }
+      ]
     }
   ]
 }

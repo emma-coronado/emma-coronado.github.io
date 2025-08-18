@@ -1,11 +1,16 @@
+var projNum = 3;
+
 async function processJson() {
     const temp = await fetch ('/content/projects.json');
     const projectInfos = await temp.json();
 
     var toDisplay = "";
 
-    // for(i in projectInfos.projects) {
-    for(let i=0; i<3; i++) {
+    if (projNum == -1) {
+        projNum = projectInfos.projects.length;
+    }
+   
+    for(let i=0; i<projNum; i++) {
         let curProj = projectInfos.projects[i];
 
         let toolPills = "";
@@ -23,24 +28,48 @@ async function processJson() {
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-3">
                             <h3 class="text-2xl font-display font-extrabold">${curProj.name}</h3>
-                            <span class="text-xs font-medium text-primary px-3 py-1 rounded-full ml-3 border border-primary">Front-End</span>
+                            
                         </div>
                         <p class="mb-4">${curProj.description}</p>
                         <div class="flex flex-wrap gap-2 mb-6">${toolPills}</div>
                         <div class="flex justify-between">
-                            <div></div>
-                            <a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[0].url}" class="text-neutral hover:text-gray-900">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>`;
+                            <div></div>`;
+
+        for (link in curProj.links) {
+            if (curProj.links[link].type == "github") {
+                toDisplay += `<a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[link].url}" class="text-neutral hover:text-primary">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>`
+            }
+        }
+
+        toDisplay += `</div> </div> </div>`;
     }
 
     document.getElementById('project-cards').insertAdjacentHTML("beforeend", toDisplay);
 }
 
 processJson();
+
+// make button expand or collapse additional projects
+document.getElementById("moreProjBtn").onclick = function() {
+    // set display and project card amt values
+    if (projNum == 3) {
+        projNum = -1;
+        document.getElementById("moreProjBtn").innerText = "View Fewer Projects";
+    }
+    else {
+        projNum = 3;
+        document.getElementById("moreProjBtn").innerText = "View More Projects";
+    }
+
+    // re-render cards
+    document.getElementById('project-cards').innerHTML = "";
+    processJson();
+
+    // scroll back to top of project section
+    document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
+};
 
 // sample card
 

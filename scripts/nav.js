@@ -22,7 +22,7 @@ var navHTML =
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden  pb-5 px-6 ">
+        <div id="mobile-menu" class="lg:hidden hidden pb-5 px-6 ">
             <a href="#about" class="block py-2 font-medium">About</a>
             <a href="#projects" class="block py-2 font-medium">Projects</a>
             <a href="#education" class="block py-2 font-medium">Education</a>
