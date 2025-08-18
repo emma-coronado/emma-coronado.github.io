@@ -172,4 +172,5 @@ document.getElementById("moreProjBtn").onclick = function() {
     if (document.getElementById("projects")) {
         document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
     }
+    clearAllFilters();
 };
