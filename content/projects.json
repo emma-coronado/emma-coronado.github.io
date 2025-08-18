@@ -12,12 +12,9 @@
         "Bootstrap"
       ],
       "description": "Full-Stack app built to connect student tutors to peers in need.",
-      "links": [
-        {
-          "url": "https://github.com/Dogantoro/Tutor-Bridge",
-          "type": "github"
-        }
-      ]
+      "links": {
+        "github": "https://github.com/Dogantoro/Tutor-Bridge"
+      }
     },
     {
       "name": "Rx-Warning.com",
@@ -29,16 +26,10 @@
         "Bootstrap"
       ],
       "description": "Responsive UI to dynamically display drug interaction data, leveraging adjacency lists and matrices for optimized search performance.",
-      "links": [
-        {
-          "url": "https://github.com/Dogantoro/rx-warning",
-          "type": "github"
-        },
-        {
-          "url": "https://youtu.be/qS-0V51hbko",
-          "type": "youtube"
-        }
-      ]
+      "links": {
+        "github": "https://github.com/Dogantoro/rx-warning",
+        "youtube": "https://youtu.be/qS-0V51hbko"
+      }
     },
     {
       "name": "Portfolio",
@@ -50,12 +41,9 @@
         "Tailwind CSS"
       ],
       "description": "Online portfolio",
-      "links": [
-        {
-          "url": "https://github.com/emma-coronado/emma-coronado.github.io",
-          "type": "github"
-        }
-      ]
+      "links": {
+        "github": "https://github.com/emma-coronado/emma-coronado.github.io"
+      }
     },
     {
       "name": "Coquette Bows Chrome Extension",
@@ -67,16 +55,10 @@
       ],
       "description": "Coquette Bows Extension, with over 10k users across 100+ countries, enhances the browsing experience by inserting cute bows next to webpage headings.",
       "explanation": "The extension can be toggled on and off from the extension popup with the toggle status saved using the Chrome Storage API. The sizing of the bows is calculated based on text size.",
-      "links": [
-        {
-          "url": "https://github.com/Dogantoro/rx-warning",
-          "type": "github"
-        },
-        {
-          "url": "https://chromewebstore.google.com/detail/coquette-bows-extension/iakojhpeaoimjhbaelkgbdahchckiieg",
-          "type": "cws"
-        }
-      ]
+      "links": {
+        "github": "https://github.com/Dogantoro/rx-warning",
+        "cws": "https://chromewebstore.google.com/detail/coquette-bows-extension/iakojhpeaoimjhbaelkgbdahchckiieg"
+      }
     },
     {
       "name": "GiGa Studios Game Development",
@@ -88,7 +70,8 @@
         "Tiled"
       ],
       "description": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game.",
-      "explanation": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines"
+      "explanation": "Project manager for GiGa Studios, a 13 person student game development team at the University of Florida currently working on a multi-level 2D game, using the libGDX Java framework and tiled level editor, to be released for download on the web later this year. <br>As project manager for this team I:<br>- Plan and organize individual tasks and sprints<br>- Organize and lead weekly team meetings, standups, and retrospectives<br>- Monitor team progress and set deadlines",
+      "links": {}
     },
     {
       "name": "Sound Button Chrome Extension",
@@ -99,12 +82,9 @@
       ],
       "description": "Simple sound effect button popup and with hundreds of users to date.",
       "explanation": "Starting as a computer science group gag, the Slay Button Extension is simple sound effect button styled with CSS that plays the slay sound effect when pressed from the extension popup and has hundreds of users to date",
-      "links": [
-        {
-          "url": "https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp",
-          "type": "cws"
-        }
-      ]
+      "links": {
+        "cws": "https://chromewebstore.google.com/detail/slay-button/efgbgglcmcjfacdolimkpchpiephlncp"
+      }
     },
     {
       "name": "Minesweeper",
@@ -113,6 +93,7 @@
         "SFML"
       ],
       "description": "Classic minesweeper game including test files that read from premade board files and a debug button that displays all the mines while playing.",
+      "links": {},
       "images": "minesweeper.png"
     },
     {
@@ -123,16 +104,10 @@
         "Figma"
       ],
       "description": "Website centered around accessible web practices to practice accessibility centered development.",
-      "links": [
-        {
-          "url": "https://github.com/emma-coronado/WaterConsciousGators",
-          "type": "github"
-        },
-        {
-          "url": "https://emmacoronado.com/AccessibleDesignPractice/",
-          "type": "website"
-        }
-      ]
+      "links": {
+        "github": "https://github.com/emma-coronado/WaterConsciousGators",
+        "website": "https://emmacoronado.com/AccessibleDesignPractice/"
+      }
     },
     {
       "name": "Water Conscious Gators",
@@ -142,17 +117,11 @@
         "CSS",
         "Bootstrap"
       ],
-      "description": "Personal water usage calculator bulit to bring awareness to the impact individuals can have on drought prevention.",
-      "links": [
-        {
-          "url": "https://github.com/emma-coronado/WaterConsciousGators",
-          "type": "github"
-        },
-        {
-          "url": "https://github.com/emma-coronado/WaterConsciousGators",
-          "type": "website"
-        }
-      ]
+      "description": "Personal water usage calculator built to bring awareness to the impact individuals can have on drought prevention.",
+      "links": {
+        "github": "https://github.com/emma-coronado/WaterConsciousGators",
+        "website": "https://github.com/emma-coronado/WaterConsciousGators"
+      }
     }
   ]
 }

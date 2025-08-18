@@ -19,12 +19,7 @@ async function processJson() {
         }
 
         toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
-                    <div class="h-56 overflow-hidden">
-                        <div class="browser-mockup bg-gradient-to-br from-indigo-600 to-pink-400 h-full">
-                            <div class="flex items-center justify-center h-full text-white w-24">
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-3">
                             <h3 class="text-2xl font-display font-extrabold">${curProj.name}</h3>
@@ -35,13 +30,12 @@ async function processJson() {
                         <div class="flex justify-between">
                             <div></div>`;
 
-        for (link in curProj.links) {
-            if (curProj.links[link].type == "github") {
-                toDisplay += `<a title="${curProj.name + " GitHub Repository"}" href="${curProj.links[link].url}" class="text-neutral hover:text-primary">
-                                <i class="fab fa-github text-2xl"></i>
-                            </a>`
-            }
+        if (curProj.links.hasOwnProperty("github")) {
+            toDisplay += `<a title="${curProj.name + " GitHub Repository"}" href="${curProj.links.github}" target="_blank" class="text-neutral hover:text-primary">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>`
         }
+        
 
         toDisplay += `</div> </div> </div>`;
     }
