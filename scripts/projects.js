@@ -1,21 +1,114 @@
 var projNum = 3;
+let allProjects = [];
+let activeFilters = new Set();
 
-async function processJson() {
-    const temp = await fetch ('/content/projects.json');
+async function loadProjects() {
+    const temp = await fetch('/content/projects.json');
     const projectInfos = await temp.json();
+    allProjects = projectInfos.projects;
+    
+    // Generate filter buttons
+    generateFilterButtons();
+    
+    // Display projects
+    displayProjects();
+}
 
-    var toDisplay = "";
+function generateFilterButtons() {
+    const allTools = new Set();
+    
+    // Collect all unique tools from all projects
+    allProjects.forEach(project => {
+        project.tools.forEach(tool => {
+            allTools.add(tool);
+        });
+    });
+    
+    // Sort tools alphabetically
+    const sortedTools = Array.from(allTools).sort();
+    
+    // Generate filter buttons
+    let filterButtonsHTML = '';
+    sortedTools.forEach(tool => {
+        filterButtonsHTML += `
+            <button class="filter-btn badge badge-outline badge-lg cursor-pointer hover:badge-primary transition-colors" 
+                    data-filter="${tool}">
+                ${tool}
+            </button>
+        `;
+    });
+    
+    document.getElementById('filter-buttons').innerHTML = filterButtonsHTML;
+    
+    // Add event listeners to filter buttons
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            toggleFilter(filter, this);
+        });
+    });
+    
+    // Add event listener to clear filters button
+    document.getElementById('clear-filters').addEventListener('click', clearAllFilters);
+}
 
-    if (projNum == -1) {
-        projNum = projectInfos.projects.length;
+function toggleFilter(filter, buttonElement) {
+    if (activeFilters.has(filter)) {
+        // Remove filter
+        activeFilters.delete(filter);
+        buttonElement.classList.remove('badge-primary');
+        buttonElement.classList.add('badge-outline');
+    } else {
+        // Add filter
+        activeFilters.add(filter);
+        buttonElement.classList.remove('badge-outline');
+        buttonElement.classList.add('badge-primary');
     }
-   
-    for(let i=0; i<projNum; i++) {
-        let curProj = projectInfos.projects[i];
+    
+    displayProjects();
+}
 
+function clearAllFilters() {
+    activeFilters.clear();
+    
+    // Reset all filter buttons
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.classList.remove('badge-primary');
+        button.classList.add('badge-outline');
+    });
+    
+    displayProjects();
+}
+
+function getFilteredProjects() {
+    if (activeFilters.size === 0) {
+        return allProjects;
+    }
+    
+    return allProjects.filter(project => {
+        // Check if project has at least one of the active filters (OR logic)
+        // Change to .every() for AND logic (project must have ALL selected filters)
+        return Array.from(activeFilters).some(filter => 
+            project.tools.includes(filter)
+        );
+    });
+}
+
+function displayProjects() {
+    const filteredProjects = getFilteredProjects();
+    let toDisplay = "";
+    
+    const projectsToShow = projNum === -1 ? filteredProjects.length : Math.min(projNum, filteredProjects.length);
+    
+    for(let i = 0; i < projectsToShow; i++) {
+        let curProj = filteredProjects[i];
+        
         let toolPills = "";
         for(n in curProj.tools) {
-            toolPills += `<badge class="badge badge-outline badge-neutral">${curProj.tools[n]}</badge>`;
+            // Highlight active filter tools
+            const isActiveFilter = activeFilters.has(curProj.tools[n]);
+            const badgeClass = isActiveFilter ? 'badge badge-primary' : 'badge badge-outline badge-neutral';
+            toolPills += `<span class="${badgeClass}">${curProj.tools[n]}</span>`;
         }
 
         toDisplay += `<div class="solid-shadow project-card bg-primary-content rounded-xl overflow-hidden">
@@ -36,16 +129,27 @@ async function processJson() {
                         </a>`
         }
         
-
         toDisplay += `</div> </div> </div>`;
     }
+    
+    // Show message if no projects match filters
+    if (filteredProjects.length === 0 && activeFilters.size > 0) {
+        toDisplay = `<div class="col-span-full text-center py-8">
+                        <p class="text-lg text-gray-500">No projects match the selected filters.</p>
+                        <button onclick="clearAllFilters()" class="btn btn-primary mt-4">Clear Filters</button>
+                    </div>`;
+    }
 
-    document.getElementById('project-cards').insertAdjacentHTML("beforeend", toDisplay);
+    document.getElementById('project-cards').innerHTML = toDisplay;
+}
+
+async function processJson() {
+    await loadProjects();
 }
 
 processJson();
 
-// make button expand or collapse additional projects
+// Update the "View More/Fewer Projects" button functionality
 document.getElementById("moreProjBtn").onclick = function() {
     // set display and project card amt values
     if (projNum == 3) {
@@ -59,49 +163,13 @@ document.getElementById("moreProjBtn").onclick = function() {
         document.getElementById("moreProjBtn").title = "View More Projects";
     }
 
-    // re-render cards
-    document.getElementById('project-cards').innerHTML = "";
-    processJson();
+    document.getElementById("projFilterSection").toggleAttribute("hidden");
 
-    // scroll back to top of project section
-    document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
+    // re-render cards with current filters
+    displayProjects();
+
+    // scroll back to top of project section if it exists
+    if (document.getElementById("projects")) {
+        document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
+    }
 };
-
-// sample card
-
-// <div class="solid-shadow project-card bg-gray-50 rounded-xl overflow-hidden">
-//     <div class="h-56 overflow-hidden">
-//         <div class="browser-mockup bg-gradient-to-br from-primary to-purple-600 h-full">
-//             <div class="flex items-center justify-center h-full text-white">
-//                 <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-//                 </svg>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="p-6">
-//         <div class="flex justify-between items-center mb-3">
-//             <h3 class="text-2xl font-display font-extrabold">E-commerce UI</h3>
-//             <span class="text-xs font-medium text-primary px-3 py-1 rounded-full ml-3 border border-primary">Front-End</span>
-//         </div>
-//         <p class="text-gray-600 mb-4">
-//             A responsive e-commerce interface with product filtering, cart functionality, and checkout process.
-//         </p>
-//         <div class="flex flex-wrap gap-2 mb-6">
-//             <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">React</span>
-//             <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Redux</span>
-//             <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Tailwind CSS</span>
-//         </div>
-//         <div class="flex justify-between">
-//             <a href="#" class="text-primary font-medium flex items-center hover:underline">
-//                 View Project
-//                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-//                 </svg>
-//             </a>
-//             <a href="#" class="text-gray-600 hover:text-gray-900">
-//                 <i class="fab fa-github text-xl"></i>
-//             </a>
-//         </div>
-//     </div>
-// </div>
